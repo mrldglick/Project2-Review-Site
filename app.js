@@ -37,7 +37,27 @@ app.use(methodOverride((req) => {
 
 
 
+app.use(session({
+  secret: 'hfeiq0hvnq0n',
+  resave: false,
+  saveUnintialized: false
+}));
 
+////////// check the session cookie for a user
+app.use((req, res, next) => {
+  if (!req.session.userId) return next();
+  User
+    .findById(req.session.userId)
+    .then(user => {
+    //we are logged in!
+      res.locals.user = user; // res. locals is always passed to the view engine
+      res.locals.isLoggedIn = true;
+
+      next();
+    });
+});
+
+app.use(flash());
 
 
 
