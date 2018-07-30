@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const { PORT, DB_URI} = require('./config/enviroment');
 const session = require('express-session');
-// const User = require('./models/user');
+const User = require('./models/user');
 const flash = require('express-flash');
 const mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -20,6 +20,20 @@ app.use(express.static(`${__dirname}/public`));
 
 ///////////////static files//////////////
 app.use(express.static(`${__dirname}/public`));
+
+///////////////Middleware/////////////////
+
+app.use(bodyParser.urlencoded({ extended: true})); //adds req.body
+
+app.use(morgan('dev'));
+
+app.use(methodOverride((req) => {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    const method = req.body._method;
+    delete req.body._method;
+    return method;
+  }
+}));
 
 
 

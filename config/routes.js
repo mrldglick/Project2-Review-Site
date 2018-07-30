@@ -1,5 +1,5 @@
 const express = require('express');
 const router = express.Router();
 
-const audiobookController = require('../controllers/audiobookController');
+const authorController = require('../controllers/authorController');
 //insert other controllers here later
