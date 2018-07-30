@@ -1,13 +1,12 @@
-<h1 class="title is-1">All the albums</h1>
+<h1 class="title is-1">List of Authors</h1>
 
 <div class="columns is-multiline">
 
-<% albums.forEach(album => { %>
+<% authors.forEach(author => { %>
   <div class="column is-one-quarter">
-  <a href="/albums/<%= album._id %>">
-  <img src=<%= album.coverPic %> alt<%= album.name %> />
-  <h2 class="title is-2"><%= album.name %></h2>
-  <h3 class="subtitle is-3"><%= album.artist %></h3>
+  <a href="/authors/<%= author._id %>">
+  <img src=<%= author.authorPic %> alt<%= author.author %> />
+  <h2 class="title is-2"><%= author.author %></h2>
   </a>
   </div>
 <% }) %>

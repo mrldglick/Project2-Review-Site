@@ -1,6 +1,6 @@
 <div class="columns is-centered">
   <div class="column is-half is-narrow">
-    <img src=<%= album.coverPic %> alt=>
+    <img src=<%= author.authorPic %> alt=>
   </div>
 </div>
 
@@ -9,31 +9,25 @@
 
 <div class="columns">
   <div class="column is-one-half">
-    <h1 class="title is-1"><%= album.name %></h1>
-    <h2 class="subtitle is-1"><%= album.artist %></h2>
-    <p>Released: <%=album.releaseYear %>
+    <h1 class="title is-1"><%= author.author %></h1>
+    <p>Nationality: <%=author.nationality%>
 
-      <% if (album.releaseYear) { %>
-        (<%= album.age %>)
-        <% } %>
-      </p>
-
-      <p>Genres: <% album.genres.forEach(genre => { %>
+      <p>Genres: <% author.genres.forEach(genre => { %>
         <span class="tag"><%= genre %></span>
         <% }) %>
       </p>
 
-      <%- include('../comments/index', { album }) %>
+      <%- include('../comments/index', { author }) %>
 
       <% if (locals.isLoggedIn) { %>
         <hr/>
         <div class="section">
           <div class="level">
             <div class="level-left">
-              <a class="button is-warning" href="/albums/<%= album.id %>/edit">Edit</a>
+              <a class="button is-warning" href="/authors/<%= author.id %>/edit">Edit</a>
             </div>
             <div class="level-right">
-              <form class="" action="/albums/<%= album.id %>" method="POST">
+              <form class="" action="/athors/<%= author.id %>" method="POST">
                 <button class="button is-warning">DELETE</button>
                 <input type="hidden" name="_method" value="DELETE">
               </form>
@@ -43,15 +37,15 @@
         <% } %>
       </div>
       <div class="column is-one-half">
-        <h1 class="title">Track listing</h1>
-        <% album.tracks.forEach((track, i) => { %>
+        <h1 class="title">Audiobook Available</h1>
+        <% author.audiobooks.forEach((audiobook, i) => { %>
           <div class="block">
             <div class="columns">
               <div class="column is-1">
                 <%= i + 1 %>.
               </div>
               <div class="column is-11">
-                <p><%= track %></p>
+                <p><%= audiobook %></p>
               </div>
             </div>
           </div>
