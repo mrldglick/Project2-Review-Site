@@ -1,7 +1,6 @@
 {
   "name": "project2-review-site",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,19 @@
   "bugs": {
     "url": "https://github.com/mrldglick/Project2-Review-Site/issues"
   },
-  "homepage": "https://github.com/mrldglick/Project2-Review-Site#readme"
+  "homepage": "https://github.com/mrldglick/Project2-Review-Site#readme",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-ejs-layouts": "^2.4.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.2.5",
+    "morgan": "^1.9.0"
+  }
 }
