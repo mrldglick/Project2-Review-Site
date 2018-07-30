@@ -1,0 +1,12 @@
+<form class="" action="/albums/<%= album.id %>/comments" method="POST">
+  <div class="field">
+    <label for="content">Add a comment</label>
+    <textarea class="textarea" name="content" placeholder="Beware, the moon dog prepares to eat the great rat Sprinkles!"></textarea>
+  </div>
+
+  <input type="hidden" name="name" value="<%= locals.user.name %>">
+
+  <div class="field">
+    <button type="button is-info" name="button">Submit</button>
+  </div>
+</form>

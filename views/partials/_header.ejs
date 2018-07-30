@@ -1,0 +1,29 @@
+
+<nav class="navbar is-light">
+  <div class="container">
+  <div class="navbar-left">
+    <div class="navbar-brand">
+
+      <figure class="image is-64x64">
+
+        <img src="https://cdn.shopify.com/s/files/1/0105/4542/products/animalcollective-strawberr_1800x.jpg?v=1499287864" alt="">
+
+      </figure>
+    </div>
+  </div>
+  <div class="navbar-right">
+    <div class="navbar-menu">
+      <a class="navbar-item" href="/">Home ¥</a>
+      <a class="navbar-item" href="/about">About †</a>
+      <a class="navbar-item" href="/albums">Albums Ω</a>
+      <a class="navbar-item" href="/albums/new">New §</a>
+      <% if (!locals.isLoggedIn) { %>
+      <a class="navbar-item" href="/registrations/new">Sign Up ∞</a>
+      <a class="navbar-item" href="/sessions/new">Log In ∆</a>
+    <% } else { %>
+      <a class="navbar-item" href="/sessions/delete">Log Out <%= `Lord ${locals.user.name}` %></a>
+    <% } %>
+    </div>
+  </div>
+</div>
+</nav>

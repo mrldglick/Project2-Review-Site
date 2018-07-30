@@ -1,0 +1,59 @@
+<div class="columns is-centered">
+  <div class="column is-half is-narrow">
+    <img src=<%= album.coverPic %> alt=>
+  </div>
+</div>
+
+<hr/>
+
+
+<div class="columns">
+  <div class="column is-one-half">
+    <h1 class="title is-1"><%= album.name %></h1>
+    <h2 class="subtitle is-1"><%= album.artist %></h2>
+    <p>Released: <%=album.releaseYear %>
+
+      <% if (album.releaseYear) { %>
+        (<%= album.age %>)
+        <% } %>
+      </p>
+
+      <p>Genres: <% album.genres.forEach(genre => { %>
+        <span class="tag"><%= genre %></span>
+        <% }) %>
+      </p>
+
+      <%- include('../comments/index', { album }) %>
+
+      <% if (locals.isLoggedIn) { %>
+        <hr/>
+        <div class="section">
+          <div class="level">
+            <div class="level-left">
+              <a class="button is-warning" href="/albums/<%= album.id %>/edit">Edit</a>
+            </div>
+            <div class="level-right">
+              <form class="" action="/albums/<%= album.id %>" method="POST">
+                <button class="button is-warning">DELETE</button>
+                <input type="hidden" name="_method" value="DELETE">
+              </form>
+            </div>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="column is-one-half">
+        <h1 class="title">Track listing</h1>
+        <% album.tracks.forEach((track, i) => { %>
+          <div class="block">
+            <div class="columns">
+              <div class="column is-1">
+                <%= i + 1 %>.
+              </div>
+              <div class="column is-11">
+                <p><%= track %></p>
+              </div>
+            </div>
+          </div>
+          <%})%>
+        </div>
