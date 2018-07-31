@@ -1,0 +1,56 @@
+<h2 class="title is-2">Edit <%= audiobook.name %></h2>
+
+<form method="POST" action="/audiobooks/<%= audiobook.id %>">
+  <div class="field">
+    <label class="label" for="name">Name</label>
+    <div class="control">
+      <input name="name" value="<%= audiobook.name %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="author">Author</label>
+    <div class="control">
+      <input name="author" value="<%= audiobook.author %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="bookCover">Book Cover (URL)</label>
+    <div class="control">
+      <input name="bookCover" value="<%= audiobook.bookCover %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="narrator">Narrator</label>
+    <div class="control">
+      <input name="narrator" value="<%= audiobook.narrator %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="publicationYear">Publication Year</label>
+    <div class="control">
+      <input name="publicationYear" value="<%= audiobook.publicationYear %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="genres">Genres (comma-separated)</label>
+    <div class="control">
+      <input name="genres" value="<%= audiobook.genres %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="length">Audiobook Length</label>
+    <div class="control">
+      <input name="length" value="<%= audiobook.length %>" class="input" type="number">
+    </div>
+  </div>
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <button class="button is-warning">Edit audiobook</button>
+</form>
