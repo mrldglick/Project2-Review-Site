@@ -67,10 +67,12 @@ app.use(router);
 
 
 app.use((error, req, res, next) => {
-  if (error) {
-    return res.render(`errors/${error.status}`, { error });
-  }
-  return next();
+  console.log(error);
+  res.send(error);
+  // if (error) {
+  //   return res.render(`errors/${error.status}`, { error });
+  // }
+  // return next();
 });
 
 ////////////////////listening/////////

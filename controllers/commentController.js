@@ -3,12 +3,12 @@ const Audiobook = require('../models/audiobook');
 
 function commentsCreate(req, res) {
   Audiobook
-    .findById(req.params.audibookId)
+    .findById(req.params.audiobookId)
     .then(audiobook => {
       audiobook.comments.push(req.body);
       return audiobook.save();
     })
-    .then(audiobook => res.redirect(`/audibooks/${audiobook.id}`)) //back to show page
+    .then(audiobook => res.redirect(`/audiobooks/${audiobook.id}`))
     .catch(err => console.log(err));
 }
 
@@ -22,7 +22,7 @@ function commentsDelete(req, res, next) {
       );
       return audiobook.save();
     })
-    .then(audiobook => res.redirect(`/audibooks/${audiobook.id}`)) //back to show page
+    .then(audiobook => res.redirect(`/audiobooks/${audiobook.id}`))
     .catch(next);
 }
 

@@ -6,15 +6,16 @@
         <figure class="image is-64x64">
             <img src="https://image.flaticon.com/icons/png/512/405/405738.png" alt="">
         </figure>
+        <h1 class="title is-1">Audio Shelf</h1>
       </div>
     </div>
     <div class="navbar-right">
       <div class="navbar-menu">
         <a class="navbar-item" href="/">Home</a>
         <a class="navbar-item" href="/about">About</a>
-        <a class="navbar-item" href="/authors">Authors</a>
+        <%# <a class="navbar-item" href="/authors">Authors</a> %>
         <a class="navbar-item" href="/audiobooks">Audiobooks</a>
-        <a class="navbar-item" href="/authors/new">Add Author</a>
+        <a class="navbar-item" href="/audiobooks/new">Add Audiobook</a>
         <% if (!locals.isLoggedIn) { %>
         <a class="navbar-item" href="/registrations/new">Sign Up</a>
         <a class="navbar-item" href="/sessions/new">Log In</a>

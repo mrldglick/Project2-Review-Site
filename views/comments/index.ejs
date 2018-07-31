@@ -1,4 +1,4 @@
-<% author.comments.forEach(comment => { %>
+<% audiobook.comments.forEach(comment => { %>
 <div class="columns">
   <div class="column is-11">
     <p>
@@ -10,7 +10,7 @@
   </div>
   <div class"column is-1">
     <% if (locals.isLoggedIn && locals.user.name === comment.name){ %>
-    <form action="/authors/<%= author.id %>/comments/<%= comment.id %>" method="POST">
+    <form action="/audiobooks/<%= audiobook.id %>/comments/<%= comment.id %>" method="POST">
       <input type="hidden" name="_method" value="DELETE">
       <button class="tag is-delete">x</button>
     </form>
@@ -20,5 +20,5 @@
 <% }) %>
 
 <%if (locals.isLoggedIn) {%>
-  <%- include('new', { author }) %>
+  <%- include('new', { audiobook }) %>
 <% } %>
