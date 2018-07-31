@@ -1,0 +1,42 @@
+<h2 class="title is-2">Edit <%= author.author %></h2>
+
+<form method="POST" action="/authors/<%= author.id %>">
+  <div class="field">
+    <label class="label" for="author">Name</label>
+    <div class="control">
+      <input name="author" value="<%= author.author %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="nationality">Nationality</label>
+    <div class="control">
+      <input name="nationality" value="<%= author.nationality %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="numberOfPublishedAudiobooks">Number Of Published Audiobooks</label>
+    <div class="control">
+      <input name="numberOfPublishedAudiobooks" value="<%= author.numberOfPublishedAudiobooks %>" class="input" type="number">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="authorPic">Author Picture (URL)</label>
+    <div class="control">
+      <input name="authorPic" value="<%= author.authorPic %>" class="input" type="text">
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="genres">Genres (comma-separated)</label>
+    <div class="control">
+      <input name="genres" value="<%= author.genres %>" class="input" type="text">
+    </div>
+  </div>
+
+  <input type="hidden" name="_method" value="PUT">
+
+  <button class="button is-warning">Edit author</button>
+</form>

@@ -1,0 +1,14 @@
+<h1 class="title is-1">List of audiobooks</h1>
+
+<div class="columns is-multiline">
+
+<% audiobooks.forEach(audiobook => { %>
+  <div class="column is-one-quarter">
+  <a href="/audiobooks/<%= audiobook.id %>">
+  <img src=<%= audiobook.bookCover %> alt<%= audiobook.name %> />
+  <h2 class="title is-2"><%= audiobook.name %></h2>
+  </a>
+  </div>
+<% }) %>
+
+</div>

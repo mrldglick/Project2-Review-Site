@@ -14,7 +14,7 @@ function sessionsCreate(req, res){
       } else {
         const messages = ['Greetings mighty','Hello little','Oh, its you my'];
         const message = messages[Math.floor(Math.random() * messages.length)];
-        req.flash('primary', ` ${message} Lord ${user.name}, the spiders have grown bold without!`);
+        req.flash('primary', ` ${message} Lord ${user.name}, the spiders have grown bold without you!`);
         req.session.userId = user.id;
         res.redirect('/');
       //on successful login

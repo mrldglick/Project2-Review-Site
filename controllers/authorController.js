@@ -12,7 +12,9 @@ function authorsShow(req, res){
   const authorId = req.params.id;
   Author
     .findById(authorId)
-    .then(author => res.render('authors/show', { author }));
+    .then(author => {
+      res.render('authors/show', { author });
+    });
 }
 
 function authorsNew(req, res) {
