@@ -1,15 +1,17 @@
 
   <nav class="navbar is-info">
-    <div class="container">
-    <div class="navbar-left">
+    <div class="columns is-mobile">
+    <div class="column">
       <div class="navbar-brand">
         <figure class="image is-64x64">
             <img src="https://image.flaticon.com/icons/png/512/405/405738.png" alt="">
         </figure>
+        <div class="column">
         <h1 class="title is-1">Audio Shelf</h1>
       </div>
+      </div>
     </div>
-    <div class="navbar-right">
+    <div class="column is-one-quarter">
       <div class="navbar-menu">
         <a class="navbar-item" href="/">Home</a>
         <a class="navbar-item" href="/about">About</a>
@@ -25,3 +27,44 @@
     </div>
   </div>
   </nav>
+
+
+<div class="column is-info">
+  <nav class="level">
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/">Home</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/about">About</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/audiobooks">Audiobooks</a>
+    </p>
+    <h3 class="title is-1" class="level-item has-text-centered">
+      <img src="https://image.flaticon.com/icons/png/512/405/405738.png" alt="" style="height: 50px;">Audio Shelf
+    </h3>
+
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/audiobooks/new">Add Audiobook</a>
+    </p>
+
+  <% if (!locals.isLoggedIn) { %>
+
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/registrations/new">Sign Up</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link is-info" href="/sessions/new">Log In</a>
+    </p>
+
+ <% } else { %>
+
+   <p class="level-item has-text-centered">
+     <a class="link is-info" href="/sessions/delete">Log Out <%= `Captain ${locals.user.name}` %></a>
+   </p>
+   <p class="level-item has-text-centered">
+     <input class="input is-danger is-small is-rounded" type="text" placeholder="search">
+   </p>
+  <% } %>
+  </nav>
+</div>

@@ -11,7 +11,7 @@ const commentController = require('../controllers/commentController');
 function secureRoute(req, res, next) {
   if (!req.session.userId) {
     return req.session.regenerate(() => {
-      req.flash('danger', 'Log in or face the consequences');
+      req.flash('danger', 'Please Log In...');
       res.redirect('/sessions/new');
     });
   }
