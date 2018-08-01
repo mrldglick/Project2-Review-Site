@@ -16,7 +16,7 @@ Audiobook
   genres: ['fantasy', 'epic fantasy'],
   length: 12.32,
   comments: [
-    {name: 'Louis', content: 'something something something'
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }]
 },
 {
@@ -28,7 +28,7 @@ Audiobook
   genres: ['Crime', 'Suspense', 'Sci-Fi', 'Superpower'],
   length: 12.35,
   comments: [
-    {name: 'Louis', content: 'something something something'
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }]
 },
 {
@@ -40,7 +40,7 @@ Audiobook
   genres: ['Sci-Fi', 'Fantasy', 'LitRPG'],
   length: 24.39,
   comments: [
-    {name: 'Louis', content: 'something something something'
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }]
 },
 {
@@ -52,7 +52,7 @@ Audiobook
   genres: ['Fantasy', 'LitRPG'],
   length: 11.38,
   comments: [
-    {name: 'Louis', content: 'something something something'
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }]
 },
 {
@@ -62,7 +62,10 @@ Audiobook
   narrator: 'Nigel Planer',
   publicationYear: '17-07-07',
   genres: ['Fantasy', 'Comedy'],
-  length: 7.38
+  length: 7.38,
+  comments: [
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  }]
 },
 {
   name: 'Nightlord',
@@ -73,7 +76,7 @@ Audiobook
   genres: ['Fantasy', 'Comedy'],
   length: 36.55,
   comments: [
-    {name: 'Louis', content: 'something something something'
+    {name: 'Louis', content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
   }]
 }
 ])

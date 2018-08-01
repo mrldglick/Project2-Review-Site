@@ -1,0 +1,37 @@
+nav {
+  font-family: 'Modern Antiqua', cursive;
+  background-image: url("/images/nav.gif");
+  /* background-image: url("https://spiritmuv.files.wordpress.com/2017/07/kingdpm-2.gif?w=1280"); */
+  background-size: cover;
+  color: white;
+}
+
+main {
+  font-family: 'Yrsa', serif;
+}
+
+
+#homePic {
+  max-height: 500px;
+  margin: 15px;
+}
+
+.audioIndex {
+  font-family: 'Amatic SC', cursive;
+}
+.bookCoverIndex{
+  height: 250px;
+}
+.audioShowTitles {
+  font-family: 'Amatic SC', cursive;
+}
+.bookCoverShow {
+  margin: 20px;
+  height: 250px;
+}
+
+footer {
+  font-family: 'Modern Antiqua', cursive;
+  /* background-image: url("http://gifupnow.com/wp-content/uploads/2018/06/cyberspace-pixelart-animation-8bit-street-nightlife-art.gif");
+  background-size: cover; */
+}
