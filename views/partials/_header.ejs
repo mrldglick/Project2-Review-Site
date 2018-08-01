@@ -1,5 +1,5 @@
 
-  <nav class="navbar is-light">
+  <nav class="navbar is-info">
     <div class="container">
     <div class="navbar-left">
       <div class="navbar-brand">
@@ -13,14 +13,13 @@
       <div class="navbar-menu">
         <a class="navbar-item" href="/">Home</a>
         <a class="navbar-item" href="/about">About</a>
-        <%# <a class="navbar-item" href="/authors">Authors</a> %>
         <a class="navbar-item" href="/audiobooks">Audiobooks</a>
         <a class="navbar-item" href="/audiobooks/new">Add Audiobook</a>
         <% if (!locals.isLoggedIn) { %>
         <a class="navbar-item" href="/registrations/new">Sign Up</a>
         <a class="navbar-item" href="/sessions/new">Log In</a>
       <% } else { %>
-        <a class="navbar-item" href="/sessions/delete">Log Out <%= `Lord ${locals.user.name}` %></a>
+        <a class="navbar-item" href="/sessions/delete">Log Out <%= `Captain ${locals.user.name}` %></a>
       <% } %>
       </div>
     </div>
