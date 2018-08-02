@@ -1,15 +1,16 @@
-<div class="columns is-centered">
+<div class="columns is-half is-centered">
   <div class="column is-half is-narrow">
     <img class="bookCoverShow" src=<%= audiobook.bookCover %> alt=>
   </div>
-</div>
+</div> %>
 
-<div class="columns">
-  <div class="column is-one-half">
+<div class="columns is-centered">
+  <div class="column is-half is-narrow">
     <div class="audioShowTitles">
       <h1 class="title is-1"><%= audiobook.name %></h1>
       <h2 class="subtitle is-1"><%= audiobook.author %></h2>
     </div>
+
 
     <p>Released: <%=audiobook.publicationYear %>
 
@@ -20,7 +21,6 @@
       </p>
 
     <%- include('../comments/index', { audiobook }) %>
-
       <% if (locals.isLoggedIn) { %>
         <hr/>
         <div class="section">
