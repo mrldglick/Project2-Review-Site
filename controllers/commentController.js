@@ -14,7 +14,7 @@ function commentsCreate(req, res) {
 
 function commentsDelete(req, res, next) {
   Audiobook
-    .findById(req.params.audibookId)
+    .findById(req.params.audiobookId)
     .then(audiobook => {
       //// TODO: this should check that the user is the commenting user
       audiobook.comments = audiobook.comments.filter(

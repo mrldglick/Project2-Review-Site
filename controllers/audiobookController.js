@@ -22,6 +22,7 @@ function audiobooksNew(req, res) {
 }
 
 function audiobooksCreate(req, res){
+  req.body.genres = req.body.genres.split(',');
   Audiobook
     .create(req.body)
     .then(() => res.redirect('/audiobooks'))
@@ -37,6 +38,7 @@ function audiobooksEdit(req, res){
 }
 
 function audiobooksUpdate(req, res){
+  req.body.genres = req.body.genres.split(',');
   Audiobook
     .findByIdAndUpdate(req.params.id, req.body)
     .then(audiobook => res.redirect(`/audiobooks/${audiobook.id}`))
